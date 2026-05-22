@@ -56,7 +56,7 @@ export async function POST(req) {
           }),
         }
       );
-
+      
       const dealData = await dealRes.json();
       console.log("DEAL:", dealData);
 
