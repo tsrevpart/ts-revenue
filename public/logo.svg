@@ -1,0 +1,37 @@
+<svg width="560" height="140" viewBox="0 0 560 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="560" height="140" fill="#0B0B0C"/>
+
+  <!-- TS Mark -->
+  <text x="24" y="88"
+        font-family="Inter, Helvetica, Arial, sans-serif"
+        font-size="56"
+        font-weight="700"
+        fill="#A11212"
+        letter-spacing="3">
+    TS
+  </text>
+
+  <!-- Gold Divider -->
+  <rect x="120" y="30" width="2" height="80" fill="#C9A34A" opacity="0.9"/>
+
+  <!-- Company Name -->
+  <text x="140" y="76"
+        font-family="Inter, Helvetica, Arial, sans-serif"
+        font-size="24"
+        font-weight="500"
+        fill="#E6E6E6"
+        letter-spacing="1.2">
+    Revenue Partners
+  </text>
+
+  <!-- Sub-line -->
+  <text x="140" y="104"
+        font-family="Inter, Helvetica, Arial, sans-serif"
+        font-size="12"
+        font-weight="500"
+        fill="#C9A34A"
+        letter-spacing="2">
+    REVENUE SYSTEM DESIGN
+  </text>
+</svg>
