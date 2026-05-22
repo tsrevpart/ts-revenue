@@ -1,7 +1,7 @@
 export async function POST(req) {
   const body = await req.json();
   const { email, company } = body;
-
+  
   // 1. Create Contact
   const contactRes = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
     method: "POST",
