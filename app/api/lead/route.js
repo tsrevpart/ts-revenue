@@ -37,6 +37,11 @@ export async function POST(req) {
 
   const dealData = await dealRes.json();
 
+  console.log("DEAL RESPONSE:", dealData);
+``
+
+  const dealData = await dealRes.json();
+
   return Response.json({
     success: true,
     contact: contactData,
