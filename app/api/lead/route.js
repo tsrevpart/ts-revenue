@@ -35,30 +35,27 @@ export async function POST(req) {
 
     const contactId = contactData.id;
 
-    // ✅ 2. Create Deal (SAFE)
-    let dealId = null;
+    // ✅ 2. Create Deal (FORCED DEBUG)
+const dealRes = await fetch(
+  "https://api.hubapi.com/crm/v3/objects/deals",
+  {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.HUBSPOT_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      properties: {
+        dealname: `New Lead - ${company}`,
+        pipeline: "default",
+        dealstage: "appointmentscheduled",
+      },
+    }),
+  }
+);
 
-    try {
-      const dealRes = await fetch(
-        "https://api.hubapi.com/crm/v3/objects/deals",
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${process.env.HUBSPOT_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            properties: {
-              dealname: `New Lead - ${company}`,
-              pipeline: "903129528",
-              dealstage: "1365758387",
-            },
-          }),
-        }
-      );
-      
-      const dealData = await dealRes.json();
-      console.log("DEAL:", dealData);
+const dealText = await dealRes.text();
+console.log("DEAL RAW:", dealText);
 
       if (dealRes.ok) {
         dealId = dealData.id;
