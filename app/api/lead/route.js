@@ -29,8 +29,8 @@ export async function POST(req) {
     body: JSON.stringify({
       properties: {
         dealname: `New Lead - ${company}`,
-        pipeline: "default",
-        dealstage: "appointmentscheduled"
+        pipeline: "903129528",
+        dealstage: "1365758387"
       }
     })
   });
