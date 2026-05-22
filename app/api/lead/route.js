@@ -55,7 +55,7 @@ export async function POST(req) {
             pipeline: "903129528",
 
             // ✅ IMPORTANT: this must be INTERNAL VALUE (NOT numeric ID)
-            dealstage: "leadcaptured" 
+            dealstage: "1365758387" 
           },
         }),
       }
