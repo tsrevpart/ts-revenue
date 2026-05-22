@@ -8,163 +8,181 @@ export default function HomePage() {
       fontFamily: 'Inter, system-ui, sans-serif'
     }}>
 
-      {/* ✅ HERO SECTION */}
+      {/* ✅ HERO (LEFT-ALIGNED, NOT CENTERED) */}
       <section style={{
         minHeight: '100vh',
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
         alignItems: 'center',
-        padding: '40px',
-        textAlign: 'center'
+        padding: '0 80px'
       }}>
 
-        {/* ✅ LOGO */}
-        <div style={{ marginBottom: '50px' }}>
-          <img src="/logo.png" alt="TS Revenue Partners" style={{ width: '420px' }} />
-        </div>
+        <div style={{ maxWidth: '1200px', width: '100%' }}>
 
-        {/* ✅ HEADLINE */}
-        <h1 style={{
-          fontSize: '52px',
-          lineHeight: 1.1,
-          maxWidth: '900px',
-          marginBottom: '24px',
-          fontWeight: 600
-        }}>
-          Pipeline Is Not the Constraint.<br />
-          Predictability Is.
-        </h1>
-
-        {/* ✅ SUBHEAD */}
-        <p style={{
-          fontSize: '20px',
-          color: '#AAA',
-          maxWidth: '700px',
-          marginBottom: '40px'
-        }}>
-          TS Revenue Partners designs AI-driven revenue systems that produce
-          scalable, consistent pipeline—without reliance on individual
-          performance or isolated channels.
-        </p>
-
-        {/* ✅ CTA */}
-        <a href="/briefing">
-          <button style={{
-            padding: '18px 40px',
-            fontSize: '16px',
-            background: '#A11212',
-            border: 'none',
-            color: 'white',
-            cursor: 'pointer',
-            letterSpacing: '1px'
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '80px',
+            alignItems: 'center'
           }}>
-            Apply for Executive Briefing
-          </button>
-        </a>
 
-        {/* ✅ TRUST */}
-        <div style={{
-          marginTop: '20px',
-          fontSize: '13px',
-          color: '#666'
-        }}>
-          Built for CROs, VP Sales, and Revenue Leaders
+            {/* LEFT SIDE */}
+            <div>
+
+              {/* LOGO */}
+              <img src="/logo.png" style={{
+                width: '260px',
+                marginBottom: '40px'
+              }} />
+
+              {/* HEADLINE */}
+              <h1 style={{
+                fontSize: '54px',
+                lineHeight: 1.1,
+                marginBottom: '24px',
+                fontWeight: 600
+              }}>
+                Pipeline Is Not the Constraint.
+                <br />
+                Predictability Is.
+              </h1>
+
+              {/* SUBHEAD */}
+              <p style={{
+                fontSize: '20px',
+                color: '#AAA',
+                maxWidth: '520px',
+                marginBottom: '40px'
+              }}>
+                We design AI-driven revenue systems that create consistent,
+                scalable pipeline—independent of individual performance.
+              </p>
+
+              {/* CTA */}
+              <a href="/briefing">
+                <button style={{
+                  padding: '18px 36px',
+                  background: '#A11212',
+                  border: 'none',
+                  color: '#FFF',
+                  fontSize: '15px',
+                  cursor: 'pointer',
+                  letterSpacing: '1px'
+                }}>
+                  Apply for Executive Briefing
+                </button>
+              </a>
+
+            </div>
+
+
+            {/* RIGHT SIDE (STRUCTURAL VISUAL BLOCK) */}
+            <div style={{
+              height: '400px',
+              border: '1px solid #222',
+              background: 'linear-gradient(135deg, #111 0%, #0B0B0C 100%)'
+            }} />
+
+          </div>
+
         </div>
 
       </section>
 
 
-      {/* ✅ PROBLEM SECTION */}
+      {/* ✅ PROBLEM (TIGHTER + OFFSET) */}
       <section style={{
-        padding: '120px 20px',
-        textAlign: 'center',
-        maxWidth: '800px',
-        margin: '0 auto'
+        padding: '120px 80px',
+        maxWidth: '900px'
       }}>
 
         <h2 style={{
           fontSize: '32px',
           marginBottom: '20px'
         }}>
-          Most Revenue Teams Are Operating Without a System
+          Most Revenue Teams Don’t Operate on Systems.
         </h2>
 
         <p style={{
+          fontSize: '18px',
           color: '#999',
-          lineHeight: 1.8,
-          fontSize: '18px'
+          lineHeight: 1.8
         }}>
-          Pipeline exists—but it is inconsistent.<br /><br />
+          Pipeline exists — but it is inconsistent.<br /><br />
 
-          Generation depends on SDR performance, campaign timing,
-          or individual channels.<br /><br />
+          Generation depends on people, channels, and timing.<br /><br />
 
-          That creates volatility—not scale.<br /><br />
+          That creates volatility — not scale.<br /><br />
 
-          The constraint is not effort.<br />
+          The constraint is not activity.<br />
           The constraint is system design.
         </p>
 
       </section>
 
 
-      {/* ✅ SOLUTION */}
+      {/* ✅ SOLUTION (WIDER + CONTRAST BLOCK) */}
       <section style={{
-        padding: '120px 20px',
-        background: '#111',
-        textAlign: 'center'
+        padding: '120px 80px',
+        background: '#111'
       }}>
 
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div style={{
+          maxWidth: '1200px',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '80px'
+        }}>
 
-          <h2 style={{
-            fontSize: '32px',
-            marginBottom: '20px'
-          }}>
-            We Design Revenue Infrastructure
-          </h2>
+          <div>
+            <h2 style={{ fontSize: '32px', marginBottom: '20px' }}>
+              We Build Revenue Infrastructure
+            </h2>
+          </div>
 
-          <p style={{
+          <div style={{
+            fontSize: '18px',
             color: '#AAA',
-            lineHeight: 1.8,
-            fontSize: '18px'
+            lineHeight: 1.8
           }}>
-            TS Revenue Partners works directly with revenue leadership to design
-            and implement structured, AI-enabled pipeline generation systems.<br /><br />
+            TS Revenue Partners works with leadership teams to design and
+            implement structured, AI-enabled revenue systems.<br /><br />
 
-            These systems eliminate dependence on individual performance and
-            create consistent, scalable growth.
-          </p>
+            These systems eliminate dependency on reps, campaigns,
+            and inconsistent channels — replacing them with predictable,
+            scalable pipeline generation.
+          </div>
 
         </div>
 
       </section>
 
 
-      {/* ✅ OUTCOMES */}
+      {/* ✅ OUTCOMES (CLEAN GRID) */}
       <section style={{
-        padding: '120px 20px',
-        textAlign: 'center'
+        padding: '120px 80px'
       }}>
 
-        <div style={{ maxWidth: '700px', margin: '0 auto' }}>
+        <div style={{
+          maxWidth: '1000px'
+        }}>
 
           <h2 style={{
             fontSize: '32px',
-            marginBottom: '30px'
+            marginBottom: '40px'
           }}>
             What This Enables
           </h2>
 
           <div style={{
-            fontSize: '20px',
-            color: '#CCC',
-            lineHeight: 2
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '30px',
+            fontSize: '18px',
+            color: '#CCC'
           }}>
             <div>✔ Predictable pipeline generation</div>
             <div>✔ Reduced reliance on outbound teams</div>
-            <div>✔ Scalable acquisition infrastructure</div>
+            <div>✔ Scalable acquisition systems</div>
             <div>✔ Visibility into revenue creation</div>
           </div>
 
@@ -175,39 +193,34 @@ export default function HomePage() {
 
       {/* ✅ FINAL CTA */}
       <section style={{
-        padding: '140px 20px',
-        textAlign: 'center'
+        padding: '140px 80px'
       }}>
 
-        <div style={{ maxWidth: '700px', margin: '0 auto' }}>
+        <h2 style={{
+          fontSize: '32px',
+          marginBottom: '20px',
+          maxWidth: '600px'
+        }}>
+          If Pipeline Consistency Is Limiting Growth,
+          You Already Have the Signal.
+        </h2>
 
-          <h2 style={{
-            fontSize: '32px',
-            marginBottom: '20px'
+        <a href="/briefing">
+          <button style={{
+            marginTop: '30px',
+            padding: '18px 36px',
+            background: '#A11212',
+            border: 'none',
+            color: '#FFF',
+            fontSize: '15px',
+            cursor: 'pointer'
           }}>
-            If pipeline consistency is limiting growth,<br />
-            this will surface it quickly.
-          </h2>
-
-          <a href="/briefing">
-            <button style={{
-              marginTop: '30px',
-              padding: '18px 40px',
-              fontSize: '16px',
-              background: '#A11212',
-              border: 'none',
-              color: 'white',
-              cursor: 'pointer'
-            }}>
-              Apply for Executive Briefing
-            </button>
-          </a>
-
-        </div>
+            Apply for Executive Briefing
+          </button>
+        </a>
 
       </section>
 
     </div>
   );
 }
-``
