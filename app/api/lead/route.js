@@ -1,11 +1,13 @@
 export async function POST(req) {
   try {
+    console.log("API HIT");
+
     const body = await req.json();
     const { email, company } = body;
 
     console.log("INPUT:", email, company);
 
-    // ✅ 1. Create Contact
+    // ✅ Create Contact
     const contactRes = await fetch(
       "https://api.hubapi.com/crm/v3/objects/contacts",
       {
@@ -23,42 +25,45 @@ export async function POST(req) {
       }
     );
 
-    const contactData = await contactRes.json();
-    console.log("CONTACT:", contactData);
+    const contactText = await contactRes.text();
+    console.log("RAW CONTACT RESPONSE:", contactText);
+
+    let contactData;
+    try {
+      contactData = JSON.parse(contactText);
+    } catch {
+      contactData = contactText;
+    }
 
     if (!contactRes.ok) {
       return new Response(
-        JSON.stringify({ error: "Contact failed", details: contactData }),
+        JSON.stringify({
+          error: "Contact failed",
+          details: contactData,
+        }),
         { status: 500 }
       );
     }
 
-    const contactId = contactData.id;
+    // ✅ SAFE RETURN (NO DEAL FOR NOW)
+    return new Response(
+      JSON.stringify({
+        success: true,
+        contact: contactData,
+      }),
+      { status: 200 }
+    );
 
-    // ✅ 2. Create Deal (FORCED DEBUG)
-const dealRes = await fetch(
-  "https://api.hubapi.com/crm/v3/objects/deals",
-  {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.HUBSPOT_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      properties: {
-        dealname: `New Lead - ${company}`,
-        pipeline: "default",
-        dealstage: "appointmentscheduled",
-      },
-    }),
+  } catch (error) {
+    console.error("CRASHED:", error);
+
+    return new Response(
+      JSON.stringify({
+        error: "Server crashed",
+        message: error.message,
+      }),
+      { status: 500 }
+    );
   }
-);
-
-const dealText = await dealRes.text();
-console.log("DEAL RAW:", dealText);
-
-      if (dealRes.ok) {
-        dealId = dealData.id;
-
-        // ✅ 3. Associate Deal ↔ Contact
-        await fetch(
+}
+``
