@@ -21,7 +21,7 @@ export default function HomePage() {
 
         {/* ✅ LOGO */}
         <div style={{ marginBottom: '50px' }}>
-          <img src="/logo.png" alt="TS Revenue Partners" style={{ width: '420px' }} />
+          <img src="/public/logo.png" alt="TS Revenue Partners" style={{ width: '420px' }} />
         </div>
 
         {/* ✅ HEADLINE */}
