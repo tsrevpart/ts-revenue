@@ -1,0 +1,1 @@
+export default function RootLayout({children}){return (<html><body style={{margin:0,background:'#0B0B0C',color:'#E6E6E6'}}>{children}</body></html>)}

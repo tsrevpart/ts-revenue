@@ -1,0 +1,1 @@
+'use client';export default function Page(){return (<div style={{color:'#fff',padding:40}}><h1>Executive Briefing</h1><p>Form coming next step</p></div>)}
